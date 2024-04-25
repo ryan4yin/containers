@@ -1,4 +1,4 @@
 kubernetes-client
 requests
 pyyaml
-
+ipython
