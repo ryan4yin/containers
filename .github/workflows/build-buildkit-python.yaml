@@ -1,22 +1,17 @@
-name: Build and Push OCI Images
+name: Build buildkit-python
 
+# https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
 on:
   push:
     branches:
       - main
-    paths-ignore:
-      - "scripts/**"
-      - "**.md"
-      - "**.nu"
-      - "Justfile"
+    paths:
+      - kubernetes-python-client/**
   pull_request:
     branches:
       - main
-    paths-ignore:
-      - "scripts/**"
-      - "**.md"
-      - "**.nu"
-      - "Justfile"
+    paths:
+      - kubernetes-python-client/**
 
 jobs:
   docker:
@@ -41,4 +36,4 @@ jobs:
           context: kubernetes-python-client
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ryan4yin/kunbernates-python-client:latest
+          tags: ryan4yin/buildkit-python:latest
