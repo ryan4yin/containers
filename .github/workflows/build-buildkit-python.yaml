@@ -33,8 +33,8 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ${{env.IMAGE_NAME}}}}
-            ghcr.io/${{env.IMAGE_NAME}}}}
+            ${{env.IMAGE_NAME}}
+            ghcr.io/${{env.IMAGE_NAME}}
           # generate Docker tags based on the following github events or git attributes
           tags: |
             type=schedule
@@ -72,8 +72,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           # build cache
-          cache-from: type=registry,ref=ghcr.io/${{env.IMAGE_NAME}}}}:buildcache
-          cache-to: type=registry,ref=ghcr.io/${{env.IMAGE_NAME}}}}:buildcache,mode=max
+          cache-from: type=registry,ref=ghcr.io/${{env.IMAGE_NAME}}:buildcache
+          cache-to: type=registry,ref=ghcr.io/${{env.IMAGE_NAME}}:buildcache,mode=max
         env:
           # reproducing the build environment
           SOURCE_DATE_EPOCH: 0
