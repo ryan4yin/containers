@@ -12,6 +12,9 @@ on:
       - main
     paths:
       - kubernetes-python-client/**
+  # manually trigger the workflow
+  workflow_dispatch:
+
 
 env:
   CONTEXT_PATH: kubernetes-python-client/
