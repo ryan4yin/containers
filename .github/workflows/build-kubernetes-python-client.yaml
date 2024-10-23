@@ -15,10 +15,15 @@ on:
   # manually trigger the workflow
   workflow_dispatch:
 
-
 env:
   CONTEXT_PATH: kubernetes-python-client/
   IMAGE_NAME: ryan4yin/kubernetes-python-client
+
+# Allow this workflow to push to the GitHub Container Registry
+permissions:
+  actions: read
+  attestations: write
+  packages: write
 
 jobs:
   docker:

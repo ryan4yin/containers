@@ -15,10 +15,15 @@ on:
   # manually trigger the workflow
   workflow_dispatch:
 
-
 env:
   CONTEXT_PATH: buildkit-python/
   IMAGE_NAME: ryan4yin/buildkit-python
+
+# Allow this workflow to push to the GitHub Container Registry
+permissions:
+  actions: read
+  attestations: write
+  packages: write
 
 jobs:
   docker:
