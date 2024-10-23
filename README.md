@@ -19,6 +19,10 @@ There are several ways to build multi-arch images:
    - This approach is fast, but it requires that the image's build process supports
      cross-compilation.
    - it's ideal for building images for go/rust projects.
+   - Related Projects & Examples:
+     - Go: <https://github.com/ko-build/ko>,
+       [Example multi-arch Dockerfile for Go projects](https://gist.github.com/AverageMarcus/78fbcf45e72e09d9d5e75924f0db4573)
+     - Rust: <https://vnotes.pages.dev/fast-multi-arch-docker-for-rust/>
 3. Build each architecture's image on a machine with that architecture, and then merge the
    images into a single multi-arch image
    - This approach is the fastest, but the workflow will be more complex.
