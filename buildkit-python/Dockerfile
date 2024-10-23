@@ -27,3 +27,4 @@ VOLUME /home/user/.local/share/buildkit
 
 SHELL ["/bin/bash", "--login", "-c"]
 ENTRYPOINT [ "/bin/bash" ]
+
