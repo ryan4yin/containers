@@ -80,7 +80,7 @@ build-xxx:arm64:
         --frontend=dockerfile.v0 \
         --local context=${CONTEXT_PATH} \
         --local dockerfile=${CONTEXT_PATH} \
-        --output type=image,name=${IMAGE_URL}:${IMAGE_TAG}-${ARCH},push=true \
+        --output type=image,name=${IMAGE_URL}:${IMAGE_TAG}-${ARCH},oci-mediatypes=true,compression=zstd,compression-level=15,force-compression=true,push=true \
         --export-cache type=registry,mode=max,image-manifest=true,ref=${IMAGE_URL}:buildcache-${ARCH} \
         --import-cache type=registry,ref=${IMAGE_URL}:buildcache
 
