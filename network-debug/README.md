@@ -6,5 +6,8 @@
 
 ```
 kubectl debug -n default mypod -it --image=ghcr.io/ryan4yin/network-debug
+
+# or maybe a better choice
+kubectl debug -n default mypod -it --image=nicolaka/netshoot
 ```
 
